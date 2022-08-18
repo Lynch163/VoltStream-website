@@ -386,7 +386,8 @@
   --bs-gutter-y: 3rem;
 }
 
-@media (min-width: 400px) {
+/* was min 400px */
+@media (min-width: 360px) and (max-width: 720px) {
   .col-sm {
     flex: 1 0 0%;
   }
@@ -599,8 +600,8 @@
     --bs-gutter-y: 3rem;
   }
 }
-
-@media (min-width: 900px) { 
+/* was min 900px */
+@media (min-width: 721px) and (max-width: 1399px) { 
   .col-md {
     flex: 1 0 0%;
   }
@@ -2058,7 +2059,7 @@
   padding-left: 3rem !important;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 360px) and (max-width: 720px) {
   .d-sm-inline {
     display: inline !important;
   }
@@ -2662,7 +2663,7 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 721px) and (max-width: 1399px) {
   .d-md-inline {
     display: inline !important;
   }
@@ -5078,7 +5079,7 @@
   }
 } */
 
-@media print {
+/* @media print {
   .d-print-inline {
     display: inline !important;
   }
@@ -5118,7 +5119,7 @@
   .d-print-none {
     display: none !important;
   }
-}
+} */
 
 /*# sourceMappingURL=bootstrap-grid.css.map */
 
@@ -5156,52 +5157,57 @@ a {
   color: #F2F2F2;
 }
 
+p, h1, h2, h3, h4, h5, h6, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
 .header {
   padding-top: 2rem;
-  padding-bottom: 6rem;
+  margin-bottom: 2.3rem;
 }
 
-.header__logo {
-  padding-right: 5.3125rem;
-  display: inline;
-}
-
-.header__logo-tablet{
+.header__logo-tablet {
   display: none;
 }
 
-.header__link {
-  display: inline;
+.nav__link {
   padding-right: 3.125rem;
 }
 
-.header__callback {
-  padding-left: 7.0625rem;
+.nav__link:last-child {
+  padding-right: 0;
 }
 
-.header__phone-and-number_inline {
-  display: inline;
+.callback {
+  text-align: center;
+}
+
+.phone-and-number {
   font-weight: 600;
 }
 
-.header__phone-and-number_call {
-  font-size: 0.8125rem;
+.phone-ico {
+  padding-right: 0.6rem;
 }
 
+.phone-and-number_call {
+  font-size: 0.8125rem;
+  line-height: 1.3rem; 
+}
+
+
+
 .cost-calculation {
-  padding-top: 2.8125rem;
+  margin-bottom: 6.3rem;
 }
 
 .cost-calculation__title {
   padding-top: 3.125rem;
   font-size: 2.25rem;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 2.925rem;
   margin: 0;
-}
-
-.cost-calculation__title p{
-margin: 0;
 }
 
 .cost-calculation__desc {
@@ -5210,13 +5216,10 @@ margin: 0;
   line-height: 2rem;
 }
 
-.cost-calculation__desc p {
-  margin: 0;
-}
-
 .cost-calculation__button {
+  padding: 0;
+  border: none;
   margin-top: 3.125rem;
-  margin-bottom: 6.25rem;
 }
 
 .cost-calculation__link {
@@ -5227,276 +5230,313 @@ margin: 0;
   transition-duration: 1s;
 }
 
-.cost-calculation__link:hover{
+.cost-calculation__link:hover {
   background-color:#C9000C;
+}
+
+.our-advantages {
+  padding-top: 6.25rem;
+  display: flex;
 }
 
 .cost-calculation__border {
   border-left: 1px solid #E9E9E9;
+  padding-left: 1rem;
 }
 
-.cost-calculation__border p {
-  max-width: 9.0625rem;
+.cost-calculation__text {
+  margin: 0;
+  padding-top: 1.15rem;
 }
 
 .truck-and-storage{
   width: 100%;
-  height: auto;
+  height: 100%;
+  background: url(../images/dest/truck-and-storage.svg) no-repeat;
+  background-size: contain;
+  
 }
 
-.main {
-  padding-top: 3.56rem;
+/* .main {
   padding-bottom: 5rem;
-}
+} */
 
-.main__we-specialize,
-.main__list-of-works,
-.main__book-a-consultation,
-.main__FAQ {
+.we-specialize,
+.list-of-works,
+.book-a-consultation,
+.answers-on-questions {
   background-color: rgba(250, 250, 250, 0.1);
 }
 
-.main__we-specialize {
+.we-specialize {
   padding-top: 3.53rem;
   padding-bottom: 5rem;
 }
 
-.main__title {
+.we-specialize__title {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.6rem;
+  margin-bottom: 3rem;
 }
 
-.main__title p {
-  margin: 0;
-}
-
-.main__achievements {
-  padding-top: 3rem;
+.we-specialize__achievements {
+  /* padding-top: 3rem; */
   line-height: 1.575rem;
 }
 
-.main__achievements img {
-  max-width: 14.38rem;
-  max-height: 100%;
+.achievements-image {
   border-radius: 0.375rem;
+  margin-right: 1.88rem;
 }
 
-.main__achievements ul {
-  padding-left: 1.3rem;
-  max-width: 14.375rem;
-  margin: 0;
-}
-
-.main__achievements h3 {
-  padding-bottom: 1.25rem;
+.achievements-title {
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.8rem;
-  margin: 0;
 }
 
-.main__achievements p {
-  margin: 0;
+.achievements-list {
+  padding-left: 1.3rem;
 }
-
-.main__achievements li {
+.achievements-list__element {
   padding-top: 0.75rem;
-  margin: 0;
 }
 
-.main__input-form {
+.achievements-list__element:first-child {
+  padding-top: 0;
+}
+
+
+/* Section input form */
+.input-form {
   padding: 5rem 2.875rem;
 }
 
-.main__input-form img{
+.input-form img{
  width: 100%;
  height: auto; 
 }
 
-.main__list-of-works {
-  padding: 5rem 8.6875rem;
+/* Section list-of-works */
+.list-of-works {
+  padding: 5rem 0;
 }
 
-.main__list-of-works p {
-  margin: 0;
-}
-
-.main__list-of-works_title {
-  margin: 0;
+.list-of-works_title {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.6rem;
-  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.main__list-of-works_numeric {
-  text-align: right;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-.main__list-of-works_text {
-  font-weight: 500;
-  line-height: 1.85625rem;
-}
-
-.main__list-of-works_box {
-  max-width: 20rem;
+.list-of-works_box-red {
+  max-width: 22.5rem;
   height: 7.5rem;
-  margin: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 10px 20px rgba(116, 18, 18, 0.05));
-  border-radius: 6px;
-}
-
-.main__list-of-works_box-red {
-  max-width: 20rem;
-  height: 7.5rem;
-  margin: 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 10px 20px rgba(116, 18, 18, 0.05));
   border-radius: 6px;
   background-color: #F2323D;
+  transition-duration: 1s;
 }
 
-.main__reviews-about-working {
-  padding: 5rem 0;
+.list-of-works_box-red:hover {
+  background-color:#C9000C;
 }
 
-.main__reviews-about-working_title {
+.list-of-works_box {
+  max-width: 22.5rem;
+  height: 7.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 10px 20px rgba(116, 18, 18, 0.05));
+  border-radius: 6px;
+  transition-duration: 1s;
+}
+
+.list-of-works_box:hover {
+  background-color:#352e92;
+}
+
+.list-of-works_numeric {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.list-of-works_text {
+  font-weight: 500;
+  line-height: 1.86rem;
+  padding-left: 2.5rem;
+}
+
+/* Section reviews-about-working*/
+.reviews-about-working {
+  margin: 3.13rem 0;
+}
+
+.reviews-about-working_title {
   font-weight: 600;
   font-size: 2rem;
-  padding-bottom: 2.5rem;
-  align-items: center;
+  margin-bottom: 2.5rem;
+  /* align-items: center; */
 }
 
-.main__arrows {
+.arrows {
   display: flex;
   justify-content: end;
 }
 
-.main__arrows a {
-  padding: 1.25rem;
+.arrows button {
+  padding: 0;
+  background: none;
+  border: none;
+  margin-right: 2.5rem;
+  cursor: pointer;
 }
 
-.main__arrows-mobile{
+.arrows button:last-child {
+  margin-right: 0;
+}
+
+.arrows-mobile{
   display: none;
 }
 
-.main__reviews-about-working_border-image {
+.reviews-about-working_border-image {
   border-radius: 6px;
+  padding-right: 1.25rem;
 }
 
-.main__book-a-consultation {
+.reviews-about-working_border-image:last-child {
+  padding-right: 0;
+}
+
+/* Section book-a-consultation */
+.book-a-consultation {
   padding: 5rem 0;
 }
 
-
-.main__book-a-consultation_border {
+.book-a-consultation_border {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
+  max-height: 22.81rem;
 }
 
-.main__book-a-consultation_image {
-  background: url(../images/dest/lighting.svg) no-repeat;
-  background-position: center bottom;
+.book-a-consultation_engeneer {
+  position:relative;
+  bottom: 6.85rem;
 }
 
-.main__book-a-consultation_engeneer {
-  position: relative;
-  bottom: 2rem;
-}
-
-.main__book-a-consultation_desc {
+.book-a-consultation_desc {
   font-size: 2rem;
   line-height: 2.6rem;
-  max-width: 40rem;
-  padding-top: 3.75rem;
-  margin-bottom: 2.5rem;
+  margin: 3.75rem 5rem 2.5rem 0;
 }
 
-.main__book-a-consultation_desc p {
-  margin: 0;
+.book-a-consultation_input {
+  margin-bottom: 5rem;
 }
 
-.main__book-a-consultation_input {
+.input_form {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
-  color: white;
+  color: black;
   padding: 1.25rem 0 1.25rem 1.88rem;
   outline: none;
+  margin-right: 1.25rem;
 }
 
-.main__book-a-consultation_buy {
+.input_form::placeholder {
+  color: white;
+}
+
+.input_buy-button {
   font-weight: 600;
   line-height: 1.125rem;
   background: #F2323D;
   border-radius: 6px;
-  justify-content: center;
   padding: 1.25rem 3.8rem;
-  display: flex;
   transition-duration: 1s;
+  border: none;
+  color: white;
 }
 
-.main__book-a-consultation_buy:hover{
+.input_buy-button:hover {
   background-color:#C9000C;
 }
 
-.main__certificates {
-  padding: 5rem 0;
+/* Section certificate */
+.certificate {
+  margin: 5rem 0;
 }
 
-.main__FAQ {
-  padding: 5rem 6.25rem;
+.certificate-certificates {
+  padding-right: 2.5rem;
+}
+
+.certificate-certificates:last-child {
+  padding-right: 0;
+}
+
+/* Section answers-on-questions */
+.answers-on-questions {
+  padding: 5rem 0;
   font-weight: 500;
   line-height: 1.91rem;
 }
 
-.main__FAQ_title {
+.answers-on-questions_title {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.6rem;
-  margin: 0;
-  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.main__FAQ_border {
+.answers-on-questions_block {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 10px 20px rgba(116, 18, 18, 0.05));
   border-radius: 6px;
-  max-width: 35rem;
+  /* max-width: 35rem; */
+  /* margin-bottom: 1.25rem; */
+  /* padding: 1.875rem; */
+  padding: 1.88rem 2rem 1.88rem 1.88rem;
   margin-bottom: 1.25rem;
-  padding: 1.875rem;
 }
 
-.main__FAQ_border p {
-  margin: 0;
+.answers-on-questions_block:last-child {
+  margin-bottom: 0;
 }
 
-.main__FAQ_mark-flex {
-  display: flex;
-  justify-content: end;
-  align-items: center;
+.block-button {
+  border: none;
+  background: none;
+  transition-duration: 1s;
+  border-radius: 6px;
 }
 
-.main__FAQ_time-to-send {
+.block-button:hover {
+background-color: purple;
+}
+
+.block-button:active {
+  background-color: black;
+}
+
+.answers-on-questions_time-to-send {
   font-weight: 400;
   font-size: 1.125rem;
-  padding-top: 1.125rem;
+  margin-top: 1.125rem;
 }
 
 
-.footer p {
-  margin: 0;
-}
+/* Section footer */
 
-.footer h2 {
-  margin: 0;
-}
-
-.footer__holder {
+.footer{
   position: relative;
 }
 
@@ -5508,7 +5548,6 @@ margin: 0;
   position: absolute;
   top: 5rem;
   left: 5rem;
-  max-width: 31.875rem;
   background: #FDFDFD;
   color: #333333;
   padding: 3.75rem;
@@ -5517,21 +5556,21 @@ margin: 0;
 
 }
 
-.footer__feedback_title {
+.feedback_title {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.6rem;
   padding-bottom: 1.6rem;
 }
 
-.footer__feedback_phone-and-website {
+.feedback_phone-and-website {
   font-size: 1.25rem;
   line-height: 2rem;
   color: #4F4F4F;
   padding-bottom: 1.56rem;
 }
 
-.footer__feedback_adress {
+.feedback_adress {
   font-size: 1rem;
   line-height: 1.6rem;
   color: #4F4F4F;
@@ -5581,16 +5620,7 @@ margin: 0;
   
   .header{
     padding-top: 2rem;
-    padding-bottom: 2.8rem;
-  }
-
-  .header__logo-container{
-    display: none;
-  }
-  
-  .header__logo {
-    padding-right: 5.3125rem;
-    display: none;
+    /* padding-bottom: 2.8rem; */
   }
   
 .header__logo-tablet{
@@ -5600,27 +5630,10 @@ margin: 0;
   padding-right: 5rem;
 }
 
-.header__list{
-  padding-left: 0;
-}
-
-  .header__link {
+  /* .nav__link {
     display: inline;
     padding-right: 1.88rem;
-  }
-  
-  .header__callback {
-    padding-left: 8.12rem;
-  }
-  
-  .header__phone-and-number_inline {
-    display: inline;
-    font-weight: 600;
-  }
-  
-  .header__phone-and-number_call {
-    font-size: 0.8125rem;
-  }
+  } */
   
   .cost-calculation {
     padding-top: 2.8125rem;
@@ -5675,60 +5688,55 @@ margin: 0;
 
 
 
-  .main {
+  /* .main {
   padding-top: 3.53rem;
   padding-bottom: 3.11rem;
-  }
+  } */
   
-  .main__we-specialize,
-  .main__list-of-works,
-  .main__book-a-consultation,
-  .main__FAQ {
-    background-color: rgba(250, 250, 250, 0.1);
-  }
-  
-  .main__we-specialize {
+  .we-specialize {
     padding-top: 3.53rem;
     padding-bottom: 3.13rem;
   }
   
-  .main__title {
+  .we-specialize__title {
     font-size: 1.5rem;
     line-height: 1.95rem;
+    margin-bottom: 1.66rem;
   }
   
-  .main__achievements {
+  .we-specialize__achievements {
 
-    padding-top: 1.66rem;
     line-height: 1.23rem;
   }
   
-  .main__achievements ul {
+  .achievements-list {
     padding-left: 1.3rem;
     max-width: 14.375rem;
 
   }
 
-  .main__achievements img {
+  .achievements-list__element {
+    padding-top: 0.5rem;
+
+  }
+
+  .achievements-image {
     max-width: 10.94rem;
   }
   
-  .main__achievements h3 {
+  .achievements-title {
     padding-bottom: 1rem;
     font-size: 1.12rem;
     line-height: 1.35rem;
   }
   
-  .main__achievements li {
-    padding-top: 0.5rem;
 
-  }
   
 
 
 
 
-  .main__input-form {
+  .input-form {
     padding: 3.13rem;
   }
   
@@ -5739,43 +5747,36 @@ margin: 0;
 
 
   
-  .main__list-of-works {
-    padding: 3.12rem;
+  .list-of-works {
+    padding: 3.12rem 0;
   }
   
-  .main__list-of-works_title {
+  .list-of-works_title {
     font-size: 1.5rem;
     line-height: 1.9rem;
-    padding-bottom: 1.56rem;
+    margin-bottom: 1.56rem;
   }
   
-  .main__list-of-works_numeric {
+  .list-of-works_numeric {
     font-size: 1.25rem;
   }
 
-  .main__list-of-works_text{
+  .list-of-works_text{
     line-height: 1.44rem;
   }
   
-  .main__list-of-works_box {
+  .list-of-works_box {
     max-width: 15rem;
     max-height: 4.69rem;
-    margin: 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 10px 20px rgba(116, 18, 18, 0.05));
-    border-radius: 6px;
     padding-left: 0.5rem;
+     /* padding pod voprosom */
   }
   
-  .main__list-of-works_box-red {
+  .list-of-works_box-red {
     max-width: 15rem;
     max-height: 4.69rem;
-    margin: 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 10px 20px rgba(116, 18, 18, 0.05));
-    border-radius: 6px;
-    background-color: #F2323D;
     padding-left: 0.5rem;
+    /* padding pod voprosom */
   }
   
 
@@ -5784,26 +5785,13 @@ margin: 0;
 
 
 
-
-
-
-
-
-
-
-
-
-
-  .main__reviews-about-working {
-    padding: 3.13rem 0;
-  }
   
-  .main__reviews-about-working_title {
+  .reviews-about-working_title {
     font-size: 1.5rem;
-    padding-bottom: 1.56rem;
+    margin-bottom: 1.56rem;
   }
   
-  .main__reviews-about-working_border-image {
+  .reviews-about-working_border-image {
     max-width: 10.94rem;
   }
   
@@ -5823,39 +5811,37 @@ margin: 0;
 
 
 
-  .main__book-a-consultation {
+  .book-a-consultation {
     padding: 4rem 0;
   }
   
   
-  .main__book-a-consultation_border {
+  .book-a-consultation_border {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 6px;
   }
   
-  .main__book-a-consultation_image {
-    background: url(../images/dest/lighting.svg) no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-  }
-  
-  .main__book-a-consultation_engeneer {
+  .book-a-consultation_engeneer {
     max-width: 14rem;
   }
   
-  .main__book-a-consultation_desc {
+  .book-a-consultation_desc {
     font-size: 1.5rem;
     line-height: 1.95rem;
-    padding-top: 1.81rem;
+    margin-top: 1.81rem;
     margin-bottom: 1.5rem;
-    max-width: 31.25rem;
+    /* max-width: 31.25rem; */
+  }
+
+  .book-a-consultation_input{
+    margin-bottom: 2.69rem;
   }
   
-  .main__book-a-consultation_input {
+  .input_form {
     padding: 1rem 0 1rem 1rem;
   }
   
-  .main__book-a-consultation_buy {
+  .input_buy-button {
     font-weight: 600;
     font-size: 1rem;
     line-height: 1rem;
@@ -5870,12 +5856,14 @@ margin: 0;
 
 
 
-  .main__certificates {
-    padding: 3.12rem 0;
+  .certificate {
+    margin: 3.12rem 0;
   }
 
-  .main__certificates-certificates{
+  .certificate-certificates {
+    padding-right: 2.5rem;
     max-width: 10.94rem;
+    /* max-width pod voprosom */
   }
   
 
@@ -5887,23 +5875,23 @@ margin: 0;
 
 
 
-  .main__FAQ {
+  .answers-on-questions {
     padding: 3.12rem 0;
     line-height: 1rem;
   }
   
-  .main__FAQ_title {
+  .answers-on-questions_title {
     font-size: 1.5rem;
     line-height: 1.95rem;
-    padding-bottom: 1.56rem;
+    margin-bottom: 1.56rem;
   }
   
-  .main__FAQ_border {
+  .answers-on-questions_block {
     margin-bottom: 1.25rem;
     padding: 1.23rem;
   }
   
-  .main__FAQ_time-to-send {
+  .answers-on-questions_time-to-send {
     font-weight: 500;
     font-size: 0.74rem;
     padding-top: 1rem;
@@ -5920,11 +5908,11 @@ margin: 0;
     position: absolute;
     top: 3rem;
     left: 2rem;
-    max-width: 26.44rem;
+    /* max-width: 26.44rem; */
     padding: 2rem;
   }
   
-  .footer__feedback_title {
+  .feedback_title {
     font-size: 1.5rem;
     line-height: 1.9rem;
     padding-bottom: 1.31rem;
@@ -5963,7 +5951,7 @@ margin: 0;
 
 
 
-@media (min-width: 320px) and (max-width: 720px){
+@media (min-width: 360px) and (max-width: 720px){
 
   body {
     font-weight: 400;
@@ -5971,10 +5959,10 @@ margin: 0;
   
   .header{
     padding-top: 1.3rem;
-    padding-bottom: 2.5rem;
+    /* padding-bottom: 2.5rem; */
   }
   
-  .header__logo {
+  .logo {
     padding-right: 0;
     display: inline;
   }
@@ -5983,27 +5971,23 @@ margin: 0;
   display: none;
 }
 
-.header__list{
+.nav__list{
   display: block;
 }
 
-  .header__link {
+  /* .nav__link {
     padding-right: 0;
-  }
+  } */
   
-  .header__callback {
+  .callback {
     display: none;
   }
   
-.header__phone-and-number{
+  .phone-and-number{
   display: none;
-}
-
-  .header__phone-and-number_inline {
-    display: none;
   }
   
-  .header__phone-and-number_call {
+  .phone-and-number_call {
     font-size: 0.8125rem;
   }
   
@@ -6028,7 +6012,6 @@ margin: 0;
   .cost-calculation__button {
     margin-top: 3.12rem;
     margin-bottom: 1.5rem;
-    text-align: center;
   }
 
   .truck-and-storage-mobile{
@@ -6037,22 +6020,6 @@ margin: 0;
   
   .cost-calculation__link {
     padding: 1.25rem 2rem;
-  }
-  
-
-
-  .m0{
-    margin: 0;
-    padding: 0;
-  }
-  
-  .db{
-    display: block;
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, .1);
-    max-width: 224px;
-    margin: 0 auto;
-    padding: 2.5rem 2rem;
   }
 
   .cost-calculation__border p {
@@ -6066,38 +6033,34 @@ margin: 0;
   }
 
 
-.dn{
-display: none;
-}
 
 
 
 
 
 
-
-  .main {
+  /* .main {
   padding-top: 0;
   padding-bottom: 0;
-  }
+  } */
   
-  .main__we-specialize {
+  .we-specialize {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
   
-  .main__title {
+  .we-specialize__title {
     font-size: 1.4rem;
     line-height: 1.8rem;
     text-align: center;
+    margin-bottom: 1.25rem;
   }
   
-  .main__achievements {
-    padding-top: 1.25rem;
+  .we-specialize__achievements {
     line-height: 1.23rem;
   }
   
-  .main__achievements ul {
+  .achievements-list {
     padding-left: 0;
     max-width: 100%;
     text-align: center;
@@ -6105,7 +6068,11 @@ display: none;
     padding-bottom: 1.8rem;
   }
 
-  .main__achievements img {
+  .achievements-list__element {
+    padding-top: 0.5rem;
+  }
+
+  .achievements-image {
     width: 18.75rem;
     max-width: 18.75rem;
     max-height: 100%;
@@ -6114,18 +6081,16 @@ display: none;
     padding-bottom: 1.8rem;
   }
   
-  .main__achievements h3 {
+  .achievements-title {
     padding-bottom: 1rem;
     font-size: 1.12rem;
     line-height: 1.35rem;
     text-align: center;
   }
   
-  .main__achievements li {
-    padding-top: 0.5rem;
-  }
+
   
-  .main__achievements p {
+  .we-specialize__achievements p {
     text-align: center;
   }
 
@@ -6133,7 +6098,7 @@ display: none;
   padding-top: 1.8rem;
  }
 
-  .main__input-form {
+  .input-form {
     padding: 2.5rem 1.8rem;
   }
   
@@ -6144,44 +6109,44 @@ display: none;
 
 
   
-  .main__list-of-works {
-    padding: 2.5rem 1.8rem;
+  .list-of-works {
+    padding: 2.5rem 0;
   }
   
-  .main__list-of-works_title {
+  .list-of-works_title {
     font-size: 1.38rem;
     line-height: 1.8rem;
     text-align: center;
-    padding-bottom: 1.63rem;
+    margin-bottom: 1.63rem;
   }
   
-  .main__list-of-works_numeric {
+  .list-of-works_numeric {
     font-size: 1.62rem;
   }
   
-  .main__list-of-works_box {
+  .list-of-works_box {
     max-width: 13rem;
     max-height: 10rem;
-    margin: 0;
-    margin-bottom: 1rem;
+    /* margin: 0;
+    margin-bottom: 1rem; */
   }
   
-  .main__list-of-works_box-red {
+  .list-of-works_box-red {
     max-width: 13rem;
     max-height: 10rem;
-    margin: 0;
-    margin-bottom: 1rem;
+    /* margin: 0;
+    margin-bottom: 1rem; */
   }
   
 
-  .mobile_column_center{
+  /* .mobile_column_center{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-  }
+  } */
 
 
 
@@ -6196,30 +6161,37 @@ display: none;
 
 
 
-  .main__reviews-about-working {
-    padding: 2.5rem 0;
+  .reviews-about-working {
+    margin: 2.5rem 0;
     position: relative;
   }
   
-  .main__reviews-about-working_title {
+  .reviews-about-working_title {
     font-size: 1.38rem;
-    padding-bottom: 1.88rem;
+    margin-bottom: 1.88rem;
     text-align: center;
     position: relative;
   }
   
-   .main__arrows {
+   .arrows {
   display: none;
   } 
 
-  .main__arrows-mobile{
+  .arrows-mobile{
     display: flex;
     justify-content: center;
-    padding: 1.25rem;
   }
 
-  .main__arrows-mobile a{
-    padding: 1.25rem;
+  .arrows-mobile button{
+    padding: 0;
+    background: none;
+    border: none;
+    margin-right: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .arrows-mobile button:last-child{
+    padding-right: 0;
   }
 
 
@@ -6235,27 +6207,31 @@ display: none;
 
 
 
-  .main__book-a-consultation {
+  .book-a-consultation {
     padding: 2.5rem 0;
   }
   
   
-  .main__book-a-consultation_desc {
+  .book-a-consultation_desc {
     font-size: 1.25rem;
     line-height: 1.63rem;
-    padding-top: 1.9rem;
-    padding-bottom: 1.9rem;
-    max-width: 18.75rem;
-    margin: 0 auto;
+    margin-top: 1.9rem;
+    margin-bottom: 1.9rem;
+    /* max-width: 18.75rem; */
+    /* margin: 0 auto; */
   }
   
-  .main__book-a-consultation_input {
+  .book-a-consultation_input{
+    margin-bottom: 1.94rem;
+  }
+
+  .input_form {
     padding: 1.25rem 0 1.25rem 1.88rem;
     width: 18.75rem;
     margin-bottom: 0.75rem;
   }
   
-  .main__book-a-consultation_buy {
+  .input_buy-button {
     font-size: 1.12rem;
     line-height: 1.12rem;
     padding: 1.25rem 6.93rem;
@@ -6271,8 +6247,8 @@ display: none;
 
 
 
-  .main__certificates {
-    padding: 2.5rem 0;
+  .certificate {
+    margin: 2.5rem 0;
   }
 
 
@@ -6286,30 +6262,26 @@ display: none;
 
 
 
-  .main__FAQ {
+  .answers-on-questions {
     padding: 2.5rem 0;
     line-height: 1rem;
   }
   
-  .main__FAQ_title {
+  .answers-on-questions_title {
     font-size: 1.37rem;
     line-height: 1.79rem;
-    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
     text-align: center;
   }
   
-  .main__FAQ_border {
+  .answers-on-questions_block {
     margin-bottom: 0.88rem;
     padding: 1rem;
     font-size: 0.7rem;
     line-height: 0.8rem;
   }
-
-  .main__FAQ_mark-flex img{
-    max-width: 0.8rem;
-  }
   
-  .main__FAQ_time-to-send {
+  .answers-on-questions_time-to-send {
     font-size: 0.6rem;
     padding-top: 0.6rem;
     line-height: 1rem;
@@ -6318,32 +6290,26 @@ display: none;
 
 
 
-.footer__holder{
-  width: 100%;
-  height: auto;
-  padding: 0;
-  margin: 0 auto;
-}
 
   .footer__feedback {
     position: static;
-    max-width: 26.44rem;
+    /* max-width: 26.44rem; */
     padding: 0;
     text-align: center;
   }
   
-  .footer__feedback_title {
+  .feedback_title {
     font-size: 1.38rem;
     line-height: 1.8rem;
     padding-top: 2.38rem;
     padding-bottom: 1rem;
   }
   
-  .footer__feedback_phone-and-website { 
+  .feedback_phone-and-website { 
      padding-bottom: 0.9rem; 
   }
   
-  .footer__feedback_adress {
+  .feedback_adress {
     padding-bottom: 1.5rem;
   }
 }

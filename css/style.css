@@ -5312,11 +5312,11 @@ button {
 }
 
 .achievements-list__element {
-  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
-.achievements-list__element:first-child {
-  padding-top: 0;
+.achievements-list__element:last-child {
+  padding-bottom: 0;
 }
 
 .achievements-subtitle {
@@ -5364,10 +5364,6 @@ button {
   margin: 0 2.5rem 2.5rem 0;
 }
 
-/* .list-of-works_box:nth-child(4n) {
-  margin: 0 0 2.5rem 0;
-} */
-
 .list-of-works_box:hover {
   background-color:#352e92;
 }
@@ -5396,12 +5392,6 @@ button {
   font-weight: 600;
   font-size: 2rem;
   margin-bottom: 2.5rem;
-  /* align-items: center; */
-}
-
-.arrows {
-  display: flex;
-  justify-content: end;
 }
 
 .arrows button {
@@ -5414,10 +5404,6 @@ button {
 
 .arrows button:last-child {
   margin-right: 0;
-}
-
-.arrows-mobile{
-  display: none;
 }
 
 .reviews-about-working_border-image {
@@ -5626,11 +5612,6 @@ background-color: purple;
 
 
 @media (max-width: 1439px) {
-
-  /* body {
-    font-weight: 500;
-    font-size: 0.88rem;
-  } */
   
 .header{
   margin-bottom: 2rem;
@@ -5733,12 +5714,9 @@ background-color: purple;
 }
 
 .achievements-list__element {
-  padding-top: 0.63rem;
+  padding-bottom: 0.5rem;
 }
 
-.achievements-list__element {
-  padding-top: 0.5rem;
-}
 
 .achievements-subtitle {
   font-size: 0.88rem;
@@ -5769,7 +5747,6 @@ background-color: purple;
   }
   
   .list-of-works_numeric {
-    font-size: 1.25rem;
     top: 0.63rem;
     right: 0.63rem;
     font-size: 1.25rem;
@@ -5888,24 +5865,8 @@ background-color: purple;
     padding-bottom: 1.31rem;
   }
 
-  .truck-and-storage-mobile {
-    display: none;
-  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5918,102 +5879,89 @@ background-color: purple;
 
 
 /* MOBILE */
-
-
-
-@media (max-width: 859px){
-
-  body {
-    font-weight: 400;
-  }
-  
+@media (max-width: 859px) {
+    
   .header{
-    padding-top: 1.3rem;
-    margin-bottom: 3.1rem; 
+    margin-bottom: 3.12rem; 
+  }
+
+  .mobile__nav-menu{
+      position: relative;
+  }
+
+  .burger-line{
+      width: 18px;
+      height: 1px;
+      background-color: white;
+  }
+
+  .burger-line:first-child{
+      position: absolute;
+      bottom: 5px;
+  }
+
+  .burger-line:last-child{
+      position: absolute;
+      top: 5px;
   }
   
   .logo {
-    padding-right: 0;
-    display: inline;
+  max-width: 6.75rem;
   }
   
-.logo-tablet {
-  display: none;
-}
-
-.nav__list{
-  display: block;
-}
-
-  /* .nav__link {
-    padding-right: 0;
-  } */
-  
-  .callback {
-    display: none;
-  }
-  
-  .phone-and-number{
-  display: none;
-  }
-  
-  .phone-and-number_call {
-    font-size: 0.8125rem;
-  }
-  
+  /* Section cost-calculation */
   .cost-calculation {
-    /* padding-top: 3.125rem; */
     margin-bottom: 2.5rem;
   }
   
   .cost-calculation__title {
     padding-top: 0;
     font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.95rem;
-    max-width: 300px;
+    line-height: 1.63rem;
     text-align: center;
-    margin: 0 auto;
   }
   
   .cost-calculation__desc {
     text-align: center;
-    margin-bottom: 3.12rem;
+    margin-bottom: 1.88rem;
   }
   
   .cost-calculation__button {
-    margin-bottom: 1.5rem;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 2rem;
   }
 
-  .truck-and-storage-mobile{
-    display: block;
+  .our-advantages {
+  max-width: 14rem;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+  background-color:rgba(255, 255, 255, .1);
+  border-radius: 12px;
+  }
+
+  .cost-calculation__border {
+  padding-left: 0.94rem;
+  margin-bottom: 1.88rem;
+  }
+
+  .cost-calculation__border img {
+  max-width: 30.43px;
   }
 
   .cost-calculation__text {
-    /* max-width: 9rem; */
     font-size: 1.1rem;
-    padding-bottom: 2rem;
+    padding-top: 1.1rem;
   }
 
-  /* .cost-calculation__border img{
-    max-width: 2rem;
-  } */
 
 
 
-
-
-
-
-
-  /* .main {
-  padding-top: 0;
-  padding-bottom: 0;
-  } */
-  
+  /* Section we-specialize */
   .we-specialize {
     padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 0.63rem;
   }
   
   .we-specialize__title {
@@ -6023,59 +5971,44 @@ background-color: purple;
     margin-bottom: 1.25rem;
   }
   
-  .we-specialize__achievements {
-    line-height: 1.23rem;
-  }
+  .achievements-image {
+      display: flex;
+      margin: 0 auto;
+      margin-bottom: 1.25rem;
+      max-width: 18.75rem;
+      width: 18.75rem;
+      height: 12.5rem;
+    }
+
+    .achievements-title {
+      margin-top: 0;
+      margin-bottom: 0.63rem;
+      text-align: center;
+    }
   
   .achievements-list {
-    padding-left: 0;
-    max-width: 100%;
     text-align: center;
-    list-style-type: none;
-    padding-bottom: 1.8rem;
+    margin-bottom: 1.88rem;
   }
 
   .achievements-list__element {
-    padding-top: 0.5rem;
+    padding-bottom: 0;
   }
 
-  .achievements-image {
-    width: 18.75rem;
-    max-width: 18.75rem;
-    max-height: 100%;
-    margin-left: 2rem;
-    border-radius: 6px;
-    padding-bottom: 1.8rem;
-  }
-  
-  .achievements-title {
-    padding-bottom: 1rem;
-    font-size: 1.12rem;
-    line-height: 1.35rem;
-    text-align: center;
+  .achievements-text{
+      text-align: center;
+      margin-bottom: 1.88rem;
   }
   
 
-  
-  .we-specialize__achievements p {
-    text-align: center;
-  }
 
- .img__factory{
-  padding-top: 1.8rem;
- }
-
+/* Section input form */
   .input-form {
-    padding: 2.5rem 1.8rem;
+    padding: 2.5rem 0;
   }
   
 
-
-
-
-
-
-  
+/* Section list-of-works */
   .list-of-works {
     padding: 2.5rem 0;
   }
@@ -6087,65 +6020,34 @@ background-color: purple;
     margin-bottom: 1.63rem;
   }
   
-  .list-of-works_numeric {
-    font-size: 1.62rem;
-  }
-  
   .list-of-works_box {
-    max-width: 13rem;
-    max-height: 10rem;
-    /* margin: 0;
-    margin-bottom: 1rem; */
+   width: 15rem;
+   height: 4.7rem;
+   margin: 0;
+   margin-bottom: 1rem;
   }
   
+  .list-of-works_box:last-child{
+  margin-bottom: 0;
+  }
 
-  /* .mobile_column_center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-  } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  /* Section reviews-about-working*/
   .reviews-about-working {
     margin: 2.5rem 0;
-    position: relative;
   }
   
   .reviews-about-working_title {
     font-size: 1.38rem;
     margin-bottom: 1.88rem;
     text-align: center;
-    position: relative;
   }
-  
-   .arrows {
-  display: none;
-  } 
 
-  .arrows-mobile{
-    display: flex;
-    justify-content: center;
-  }
 
   .arrows-mobile button{
     padding: 0;
     background: none;
     border: none;
+    margin-top: 1.88rem;
     margin-right: 2.5rem;
     cursor: pointer;
   }
@@ -6155,30 +6057,23 @@ background-color: purple;
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Section book-a-consultation */
   .book-a-consultation {
-    padding: 2.5rem 0;
+    padding: 0 0 2.5rem 0;
   }
-  
+
+  .book-a-consultation_border {
+      max-height: 26.25rem;
+    }
+
+  .book-a-consultation_engeneer-mobile {
+      max-width: 16.75rem;
+  }
   
   .book-a-consultation_desc {
     font-size: 1.25rem;
     line-height: 1.63rem;
-    margin-top: 1.9rem;
-    margin-bottom: 1.9rem;
-    /* max-width: 18.75rem; */
-    /* margin: 0 auto; */
+    margin: 1.9rem 0;
   }
   
   .book-a-consultation_input{
@@ -6186,42 +6081,30 @@ background-color: purple;
   }
 
   .input_form {
-    padding: 1.25rem 0 1.25rem 1.88rem;
+    padding: 1.25rem 0 1.25rem 0;
     width: 18.75rem;
+    margin: 0;
     margin-bottom: 0.75rem;
+  }
+
+  .input_form::placeholder{
+      padding-left: 30px;
   }
   
   .input_buy-button {
     font-size: 1.12rem;
     line-height: 1.12rem;
     padding: 1.25rem 6.93rem;
-    width: 6.9rem;
-    margin-bottom: 2rem;
   }
 
-
-
-
-
-
-
-
-
+/* Section certificate */
   .certificate {
     margin: 2.5rem 0;
   }
 
 
 
-
-
-
-
-
-
-
-
-
+/* Section answers-on-questions */
   .answers-on-questions {
     padding: 2.5rem 0;
     line-height: 1rem;
@@ -6240,6 +6123,10 @@ background-color: purple;
     font-size: 0.7rem;
     line-height: 0.8rem;
   }
+
+  .answers-on-questions_block:last-child {
+      margin-bottom:  0.88rem;
+  }
   
   .answers-on-questions_time-to-send {
     font-size: 0.6rem;
@@ -6248,12 +6135,9 @@ background-color: purple;
   }
   
 
-
-
-
+/* Section footer */
   .footer__feedback {
     position: static;
-    /* max-width: 26.44rem; */
     padding: 0;
     text-align: center;
   }
@@ -6273,3 +6157,22 @@ background-color: purple;
     padding-bottom: 1.5rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

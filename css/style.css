@@ -5513,18 +5513,19 @@ button {
 }
 
 .block-button {
-  border: none;
-  background: none;
-  transition-duration: 1s;
+  /* border: none;
+  background: none; */
+  transition-duration: .5s;
   border-radius: 6px;
 }
 
-.block-button:hover {
-background-color: purple;
+.block-button path:hover {
+  fill: #C9000C;
+  /* background-color:#C9000C; */
 }
 
 .block-button:active {
-  background-color: black;
+  transform: rotate(180deg);
 }
 
 .answers-on-questions_time-to-send {
@@ -5840,7 +5841,7 @@ background-color: purple;
   .answers-on-questions_block {
     margin-bottom: 1.25rem;
     padding: 1.23rem;
-    max-width: 22.94rem;
+    /* max-width: 22.94rem; */
   }
   
   .answers-on-questions_time-to-send {
@@ -6064,6 +6065,9 @@ background-color: purple;
 
   .book-a-consultation_border {
       max-height: 26.25rem;
+      border-right: none;
+      border-left: none;
+      border-radius: 0;
     }
 
   .book-a-consultation_engeneer-mobile {
